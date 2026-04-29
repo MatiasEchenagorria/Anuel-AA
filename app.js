@@ -214,20 +214,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- 4. Lógica del Modal (Vista Detallada del Álbum) ---
+    // --- 4. Lógica del Modal (Solo si existe en la página) ---
     const modal = document.getElementById('album-modal');
     const closeModal = document.querySelector('.close-modal');
     const albumCards = document.querySelectorAll('.album-card');
 
-    // Referencias a los elementos dentro del modal
-    const modalCover = document.getElementById('modal-cover');
-    const modalTitle = document.getElementById('modal-title');
-    const modalYear = document.getElementById('modal-year');
-    const modalTracklist = document.getElementById('modal-tracklist');
-    const modalPlayBtn = document.getElementById('modal-play-btn');
+    if (modal) {
+        // Referencias a los elementos dentro del modal
+        const modalCover = document.getElementById('modal-cover');
+        const modalTitle = document.getElementById('modal-title');
+        const modalYear = document.getElementById('modal-year');
+        const modalTracklist = document.getElementById('modal-tracklist');
+        const modalPlayBtn = document.getElementById('modal-play-btn');
 
-    // Abrir modal al hacer clic en un álbum
-    albumCards.forEach(card => {
+        // Abrir modal al hacer clic en un álbum
+        albumCards.forEach(card => {
         card.addEventListener('click', () => {
             const albumId = card.getAttribute('data-album');
             const data = albumsData[albumId];
@@ -271,7 +272,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = 'hidden';
             }
         });
-    });
+        });
+    }); // fin albumCards.forEach
+    } // fin if (modal)
 
 
 
@@ -501,24 +504,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =============================================
-    // Modal: Cerrar
+    // Modal: Cerrar (solo si el modal existe)
     // =============================================
+    if (modal && closeModal) {
+        // Función para cerrar el modal
+        const closeEvent = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
 
-    // Función para cerrar el modal
-    const closeEvent = () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    };
+        // Cerrar al hacer clic en la "X"
+        closeModal.addEventListener('click', closeEvent);
 
-    // Cerrar al hacer clic en la "X"
-    closeModal.addEventListener('click', closeEvent);
-
-    // Cerrar al hacer clic fuera del contenedor del modal (en el fondo oscuro)
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeEvent();
-        }
-    });
+        // Cerrar al hacer clic fuera del contenedor del modal
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeEvent();
+            }
+        });
+    }
     // =============================================
     // TOUR DINÁMICO: FETCH API Y RENDERIZADO
     // =============================================
