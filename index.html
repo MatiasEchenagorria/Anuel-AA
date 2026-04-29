@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuel AA | Real Hasta La Muerte</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Página web oficial de Anuel AA. Discografía, tour, merch y música. Real Hasta La Muerte.">
+    <!-- Google Fonts: Anton (Títulos agresivos) & Inter (Cuerpo limpio) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navegación Sticky -->
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">ANUEL<span style="color:var(--primary-red);">AA</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#albums">Álbumes</a></li>
+                    <li><a href="biografia.html">Biografía</a></li>
+                    <li><a href="#tour">Tour</a></li>
+                    <li><a href="#fan-zone" class="nav-fan-link">Zona Fan</a></li>
+                </ul>
+            </nav>
+            <div class="nav-social">
+                <a href="https://open.spotify.com/intl-es/artist/2R21vXR83lH98kGeO99Y66?si=4BKsN1g4T2ePPyDQbyvKnA" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.instagram.com/anuel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Home: Hero Section -->
+    <section id="home" class="hero">
+        <!-- Video Background (local file) -->
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="hero-video">
+                <source src="img/north-carolina.mp4" type="video/mp4">
+                <!-- Fallback: YouTube embed si el video local no carga -->
+                <iframe src="https://www.youtube.com/embed/qaA7HuhH6Ko?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=qaA7HuhH6Ko&amp;showinfo=0&amp;rel=0&amp;modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </video>
+        </div>
+        <!-- Parallax Background Overlay -->
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content fade-in-up">
+            <!-- Badge RHLM -->
+            <div class="hero-badge">&#128293; REAL HASTA LA MUERTE</div>
+            <!-- Efecto Glitch en el título -->
+            <h1 class="glitch-title" data-text="ANUEL AA">ANUEL AA</h1>
+            <p class="subtitle">EL FAVORITO &bull; PUERTO RICO &bull; TRAP KING</p>
+
+            <!-- Botones de acción -->
+            <div class="hero-actions">
+                <a href="#albums" class="btn btn-primary btn-neon hero-btn-main">
+                    <i class="fas fa-compact-disc"></i> Ver Discografía
+                </a>
+                <a href="#tour" class="btn btn-outline-hero">
+                    <i class="fas fa-map-marker-alt"></i> Tour 2026
+                </a>
+            </div>
+
+            <!-- Reproductor de Spotify Embebido -->
+            <div class="hero-player">
+                <p class="hero-player-label"><i class="fab fa-spotify" style="color:#1DB954;"></i> Escuchar en Spotify</p>
+                <iframe id="spotify-player"
+                    src="https://open.spotify.com/embed/artist/2R21vXR83lH98kGeO99Y66?utm_source=generator&theme=0"
+                    width="100%"
+                    height="152"
+                    frameBorder="0"
+                    allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Álbumes: Discografía Interactiva -->
+    <section id="albums" class="albums-section">
+        <div class="container fade-in-up">
+            <h2 class="section-title">Discografía</h2>
+            <div class="albums-grid">
+                <!-- Álbum: Real Hasta La Muerte -->
+                <div class="album-card" data-album="rhlm">
+                    <img src="img/rhlm.jpg" alt="Real Hasta La Muerte">
+                    <div class="album-overlay">
+                        <h3>Real Hasta La Muerte</h3>
+                        <p>2018</p>
+                    </div>
+                </div>
+
+                <!-- Álbum: Emmanuel -->
+                <div class="album-card" data-album="emmanuel">
+                    <img src="img/emmanuel.jpg" alt="Emmanuel">
+                    <div class="album-overlay">
+                        <h3>Emmanuel</h3>
+                        <p>2020</p>
+                    </div>
+                </div>
+
+                <!-- Álbum: Los Dioses -->
+                <div class="album-card" data-album="losdioses">
+                    <img src="img/los-dioses.jpg" alt="Los Dioses">
+                    <div class="album-overlay">
+                        <h3>Los Dioses</h3>
+                        <p>2021</p>
+                    </div>
+                </div>
+
+                <!-- Álbum: LLNM -->
+                <div class="album-card" data-album="llnm">
+                    <img src="img/llnm.jpg" alt="Las Leyendas Nunca Mueren">
+                    <div class="album-overlay">
+                        <h3>Las Leyendas Nunca Mueren</h3>
+                        <p>2021</p>
+                    </div>
+                </div>
+
+                <!-- Álbum: LLNM2 -->
+                <div class="album-card" data-album="llnm2">
+                    <img src="img/llnm2.jpg" alt="LLNM2">
+                    <div class="album-overlay">
+                        <h3>LLNM2</h3>
+                        <p>2022</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Zona Fan: Ranking y Trivia -->
+    <section id="fan-zone" class="fan-section fade-in-up">
+
+        <!-- Banner Zona Fan -->
+        <div class="fan-banner">
+            <img src="img/rhlm.jpg" alt="Real Hasta La Muerte" class="fan-banner-img">
+            <div class="fan-banner-overlay">
+                <div class="fan-banner-content">
+                    <span class="fan-banner-tag">💀 ZONA FAN EXCLUSIVA</span>
+                    <h2 class="fan-banner-title">¿ERES UN SOLDADO RHLM?</h2>
+                    <p class="fan-banner-sub">Demuestra cuánto sabes sobre El Favorito. 30 preguntas. 6 niveles. Sin piedad.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- Stats de Fan rápidas -->
+            <div class="fan-stats-row">
+                <div class="fan-stat-item">
+                    <span class="fan-stat-num">30</span>
+                    <span class="fan-stat-label">Preguntas</span>
+                </div>
+                <div class="fan-stat-divider"></div>
+                <div class="fan-stat-item">
+                    <span class="fan-stat-num">6</span>
+                    <span class="fan-stat-label">Niveles</span>
+                </div>
+                <div class="fan-stat-divider"></div>
+                <div class="fan-stat-item">
+                    <span class="fan-stat-num">∞</span>
+                    <span class="fan-stat-label">Replay</span>
+                </div>
+                <div class="fan-stat-divider"></div>
+                <div class="fan-stat-item">
+                    <span class="fan-stat-num" id="fan-highscore-display">0</span>
+                    <span class="fan-stat-label">Tu Récord 🏆</span>
+                </div>
+            </div>
+
+            <div class="fan-grid">
+
+                <!-- Panel lateral izquierdo: Info / Cita -->
+                <div class="fan-side-panel">
+
+                    <!-- Imagen lateral con cita -->
+                    <div class="fan-quote-card">
+                        <img src="img/llnm.jpg" alt="Las Leyendas Nunca Mueren" class="fan-side-img">
+                        <div class="fan-quote-overlay">
+                            <blockquote class="fan-quote">
+                                "Las leyendas nunca mueren, los cobardes se van."
+                            </blockquote>
+                            <cite class="fan-quote-author">— Anuel AA</cite>
+                        </div>
+                    </div>
+
+                    <!-- Guía de niveles -->
+                    <div class="fan-levels-guide">
+                        <h4 class="fan-levels-title"><i class="fas fa-layer-group"></i> Niveles de la Trivia</h4>
+                        <div class="fan-level-row"><span class="fan-level-badge lv1">Nivel 1</span><span>Fácil — Conocimiento básico</span></div>
+                        <div class="fan-level-row"><span class="fan-level-badge lv2">Nivel 2</span><span>Medio — Seguidor activo</span></div>
+                        <div class="fan-level-row"><span class="fan-level-badge lv3">Nivel 3</span><span>Difícil — Fan dedicado</span></div>
+                        <div class="fan-level-row"><span class="fan-level-badge lv4">Nivel 4</span><span>Fan — Coleccionista</span></div>
+                        <div class="fan-level-row"><span class="fan-level-badge lv5">Nivel 5</span><span>Muy difícil — Experto</span></div>
+                        <div class="fan-level-row"><span class="fan-level-badge lv6">Nivel 6</span><span>💀 RHLM — Modo Diablo</span></div>
+                    </div>
+
+                </div>
+
+                <!-- Trivia por Niveles -->
+                <div class="fan-card trivia-container">
+                    <h3><i class="fas fa-skull" style="color: var(--primary-red);"></i> Trivia <span style="font-size:0.8rem; background: linear-gradient(90deg, var(--primary-red), var(--secondary-gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-family:var(--font-body); font-weight:800; margin-left:8px;">NIVEL FAN</span></h3>
+                    <p style="color: var(--text-grey); font-size: 0.9rem; margin-bottom: 20px;">30 preguntas épicas por niveles. ¿Llegas al Nivel 6?</p>
+
+                    <!-- Barra de progreso por nivel -->
+                    <div id="trivia-level-bar" style="display:none; margin-bottom:18px;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                            <span id="trivia-current-level" style="font-size:0.8rem; color:var(--secondary-gold); font-weight:800; letter-spacing:2px;"></span>
+                            <span id="trivia-progress-text" style="font-size:0.8rem; color:var(--text-grey);"></span>
+                        </div>
+                        <div style="background:#1a1a1a; border-radius:10px; height:6px; overflow:hidden;">
+                            <div id="trivia-progress-fill" style="height:100%; background: linear-gradient(90deg, var(--primary-red), var(--secondary-gold)); border-radius:10px; transition: width 0.5s ease; width:0%;"></div>
+                        </div>
+                    </div>
+
+                    <div id="trivia-box">
+                        <!-- Stats en Vivo -->
+                        <div id="trivia-live-stats" style="display:none; justify-content:space-around; margin-bottom:20px; padding:15px; background:rgba(217,4,41,0.1); border-radius:10px; border:1px solid rgba(217,4,41,0.3);">
+                            <div style="text-align:center;">
+                                <div style="font-size:2rem; font-weight:800; color:var(--secondary-gold);" id="live-score">0</div>
+                                <div style="font-size:0.75rem; color:var(--text-grey); text-transform:uppercase;">Puntos</div>
+                            </div>
+                            <div style="text-align:center;">
+                                <div style="font-size:2rem; font-weight:800; color:#ff4500;" id="live-streak">0</div>
+                                <div style="font-size:0.75rem; color:var(--text-grey); text-transform:uppercase;">Racha 🔥</div>
+                            </div>
+                            <div style="text-align:center;">
+                                <div style="font-size:2rem; font-weight:800; color:#fff;" id="live-qnum">1</div>
+                                <div style="font-size:0.75rem; color:var(--text-grey); text-transform:uppercase;">Pregunta</div>
+                            </div>
+                        </div>
+                        <!-- Chat IA -->
+                        <div id="ai-chat-area" style="min-height:90px; margin-bottom:20px;">
+                            <div id="ai-typing" style="display:none; align-items:center; gap:12px; padding:15px; background:#111; border-radius:10px; border-left:3px solid var(--primary-red);">
+                                <span style="font-size:1.5rem;">🤖</span>
+                                <div class="typing-dots"><span></span><span></span><span></span></div>
+                            </div>
+                            <div id="ai-message" style="display:none; padding:15px; background:#111; border-radius:10px; border-left:3px solid var(--primary-red); font-size:1.05rem; line-height:1.5;"></div>
+                        </div>
+                        <!-- Opciones -->
+                        <div id="trivia-options" class="trivia-options"></div>
+                        <!-- Pantalla final -->
+                        <div id="trivia-result" style="display:none; text-align:center; padding:20px;">
+                            <h4 id="trivia-score" style="font-size:2rem; color:var(--secondary-gold); margin-bottom:10px;"></h4>
+                            <p id="trivia-result-msg" style="color:var(--text-grey); margin-bottom:20px;"></p>
+                            <button id="trivia-restart" class="btn btn-primary btn-neon" style="padding:12px 30px;">🔄 Jugar de Nuevo</button>
+                        </div>
+                        <!-- Botón Inicio -->
+                        <div id="trivia-start-container" style="text-align:center; margin-top:10px;">
+                            <button id="trivia-start" class="btn btn-primary btn-neon" style="padding:15px 40px; font-size:1.1rem;">💥 Iniciar Trivia</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contenedor de Humo CSS -->
+            <div class="smoke-container">
+                <div class="smoke"></div>
+                <div class="smoke"></div>
+                <div class="smoke"></div>
+            </div>
+        </div>
+
+
+    <!-- Secciones Extras -->
+
+    <!-- Tour Section -->
+    <section id="tour" class="tour-section fade-in-up">
+        <div class="container">
+            <h2 class="section-title">Tour Europa 2026</h2>
+            <p class="tour-subtitle">Real Hasta La Muerte 2 Tour · Junio – Julio 2026</p>
+
+            <div class="tour-layout">
+                <!-- Poster -->
+                <div class="tour-poster-wrapper">
+                    <a href="https://realhastalamuerte2tour.com/" target="_blank" class="tour-poster-link" id="tour-poster-link" title="Ver todas las fechas y comprar entradas">
+                        <img src="img/europe-tour-2026.jpg" alt="Anuel AA Europe Tour 2026 - Real Hasta La Muerte" class="tour-poster-img" id="tour-poster-img">
+                        <div class="tour-poster-overlay">
+                            <span class="tour-poster-cta"><i class="fas fa-ticket-alt"></i> Ver Entradas</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Dates -->
+                <div class="tour-dates-wrapper">
+                    <h3 class="tour-dates-heading"><i class="fas fa-map-marker-alt" style="color:var(--primary-red);"></i> Fechas en Europa</h3>
+
+                    <div id="dynamic-tour-dates" style="display: flex; flex-direction: column; gap: 18px;">
+                        <!-- Las fechas se cargarán dinámicamente aquí vía JS -->
+                        <div style="text-align: center; padding: 20px; color: var(--text-grey);">Cargando fechas del tour...</div>
+                    </div>
+
+                    <a href="https://realhastalamuerte2tour.com/" target="_blank" class="btn btn-primary btn-neon tour-all-btn" id="tour-all-dates-btn">
+                        <i class="fas fa-external-link-alt"></i> Ver Todas las Fechas y Comprar Entradas
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content fade-in-up">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/anuel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@AnuelAA" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://open.spotify.com/intl-es/artist/2R21vXR83lH98kGeO99Y66?si=4BKsN1g4T2ePPyDQbyvKnA" target="_blank"><i class="fab fa-spotify"></i></a>
+                <a href="https://music.apple.com/es/artist/anuel-aa/996166916" target="_blank"><i class="fab fa-apple"></i></a>
+            </div>
+            <p class="signature">Real Hasta La Muerte - Brrrrr 👹</p>
+            <p class="copyright">&copy; 2026 Real Hasta La Muerte Records. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Detalle del Álbum -->
+    <div id="album-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-layout">
+                <div class="modal-left">
+                    <a href="#" id="modal-cover-link" target="_blank">
+                        <img id="modal-cover" src="" alt="Portada del Álbum">
+                    </a>
+                    <a href="#" id="modal-play-btn" class="btn btn-gold" target="_blank">
+                        <i class="fas fa-play"></i> Reproducir Álbum
+                    </a>
+                </div>
+                <div class="modal-right">
+                    <a href="#" id="modal-title-link" target="_blank" style="text-decoration: none; color: inherit;">
+                        <h2 id="modal-title" style="transition: color 0.3s; cursor: pointer;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='inherit'">Título del Álbum</h2>
+                    </a>
+                    <p id="modal-year">Año</p>
+                    <!-- Tracklist inyectado via JavaScript -->
+                    <ul class="tracklist" id="modal-tracklist"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <!-- Config (API Keys) -->
+    <script src="config.js"></script>
+    <!-- Scripts JS -->
+    <script src="app.js"></script>
+</body>
+</html>
