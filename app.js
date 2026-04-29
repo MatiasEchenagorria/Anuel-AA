@@ -266,12 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 // Mostrar el modal
-                modal.style.display = 'block';
-                // Pequeño retraso para permitir que la clase CSS anime la opacidad
-                setTimeout(() => {
-                    modal.classList.add('active');
-                }, 10);
-                
+                modal.classList.add('active');
                 // Bloquear el scroll en el body
                 document.body.style.overflow = 'hidden';
             }
@@ -512,12 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para cerrar el modal
     const closeEvent = () => {
         modal.classList.remove('active');
-        // Esperar a que termine la animación de opacidad antes de ocultarlo
-        setTimeout(() => {
-            modal.style.display = 'none';
-        }, 400); 
-        // Restaurar el scroll
-        document.body.style.overflow = 'auto'; 
+        document.body.style.overflow = '';
     };
 
     // Cerrar al hacer clic en la "X"

@@ -132,6 +132,17 @@ header.scrolled {
     color: var(--text-white);
     font-size: 1.5rem;
     cursor: pointer;
+    /* Área de toque mínima de 44x44px para mobile */
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.mobile-menu-btn:hover,
+.mobile-menu-btn:active {
+    background: rgba(255,255,255,0.1);
 }
 
 /* Botones */
@@ -515,24 +526,27 @@ header.scrolled {
 
 /* Modal Vista Detallada */
 .modal {
-    display: none;
+    display: block;         /* Siempre en DOM, controlado con visibility+opacity */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(5, 5, 5, 0.95);
-    z-index: 1000;
+    z-index: 2000;          /* Por encima de TODO */
     backdrop-filter: blur(10px);
     overflow-y: auto;
     padding: 40px 20px;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
 .modal.active {
-    display: block;
     opacity: 1;
+    visibility: visible;
+    pointer-events: all;
 }
 
 .modal-content {
