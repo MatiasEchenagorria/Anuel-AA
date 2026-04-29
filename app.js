@@ -272,7 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = 'hidden';
             }
         });
-        });
     }); // fin albumCards.forEach
     } // fin if (modal)
 
