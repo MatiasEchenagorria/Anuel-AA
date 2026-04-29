@@ -726,56 +726,126 @@ footer {
     transform: translateY(0);
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
-    .modal-layout {
-        flex-direction: column;
-    }
-    .modal-left, .modal-right {
-        width: 100%;
-        border-radius: 15px;
-    }
-    .modal-left {
-        padding: 30px;
-        background: transparent;
-    }
-    .modal-left img {
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    .modal-right {
-        padding: 10px 30px 40px;
-    }
-    .glitch-title {
-        font-size: 5rem;
-    }
+/* =====================================================
+   RESPONSIVE DESIGN — MOBILE FIRST
+   ===================================================== */
+
+/* --- Menu movil desplegable --- */
+.nav-links.nav-open {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5,5,5,0.98);
+    backdrop-filter: blur(20px);
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    z-index: 999;
+    animation: menuSlideIn 0.3s ease;
 }
 
+@keyframes menuSlideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav-links.nav-open a {
+    font-size: 1.8rem;
+    font-family: var(--font-title);
+    letter-spacing: 4px;
+}
+
+.nav-links.nav-open li:last-child {
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+/* --- Tablet 900px --- */
+@media (max-width: 900px) {
+    .modal-layout { flex-direction: column; }
+    .modal-left, .modal-right { width: 100%; border-radius: 15px; }
+    .modal-left { padding: 30px; background: transparent; }
+    .modal-left img { max-width: 280px; margin: 0 auto; }
+    .modal-right { padding: 10px 20px 40px; }
+    .glitch-title { font-size: 5rem; }
+    .fan-grid { grid-template-columns: 1fr; }
+    .fan-side-panel { display: none; }
+    .tour-layout { grid-template-columns: 1fr; }
+    .tour-poster-wrapper { position: static; max-width: 300px; margin: 0 auto; }
+}
+
+/* --- Mobile 768px --- */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; 
-    }
-    .mobile-menu-btn {
-        display: block;
-    }
-    .glitch-title {
-        font-size: 3.5rem;
-    }
-    .subtitle {
-        font-size: 1.2rem;
-    }
-    .section-title {
-        font-size: 2.2rem;
-    }
-    .modal-content {
-        margin: 20px;
-    }
-    .bio-content {
-        padding: 25px;
-    }
-    .video-grid {
-        grid-template-columns: 1fr;
-    }
+    /* Navbar */
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: block; }
+    .nav-social { gap: 10px; }
+    .nav-social a { font-size: 1.1rem; }
+
+    /* Hero */
+    .glitch-title { font-size: 3.2rem; letter-spacing: 1px; }
+    .subtitle { font-size: 0.9rem; letter-spacing: 3px; }
+    .hero-badge { font-size: 0.65rem; padding: 5px 14px; }
+    .hero-actions { flex-direction: column; width: 100%; gap: 10px; }
+    .hero-btn-main, .btn-outline-hero { width: 100%; justify-content: center; padding: 14px 20px; }
+    .hero-player { padding: 12px; margin-top: 10px; }
+    .hero-scroll-indicator { display: none; }
+
+    /* Layout general */
+    .section-title { font-size: 2rem; }
+    .container { padding: 60px 16px; }
+
+    /* Albums */
+    .albums-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    /* Modal */
+    .modal-content { margin: 10px; max-height: 95vh; overflow-y: auto; }
+    #modal-title { font-size: 1.8rem; }
+    .tracklist { max-height: 250px; }
+
+    /* Zona Fan */
+    .fan-banner { height: 200px; }
+    .fan-banner-overlay { padding: 0 24px; }
+    .fan-banner-title { font-size: 1.6rem; }
+    .fan-banner-sub { display: none; }
+    .fan-stats-row { padding: 14px 10px; margin-bottom: 30px; }
+    .fan-stat-num { font-size: 1.8rem; }
+    .fan-stat-label { font-size: 0.62rem; letter-spacing: 1px; }
+    .fan-stat-divider { height: 36px; margin: 0 6px; }
+    .fan-card { padding: 20px 16px; }
+
+    /* Tour */
+    .tour-date-card { flex-wrap: wrap; gap: 14px; padding: 16px; }
+    .btn-ticket { width: 100%; justify-content: center; }
+    .tour-all-btn { padding: 14px 20px; font-size: 0.9rem; }
+
+    /* Biografia */
+    .bio-content { padding: 24px 16px; }
+    .bio-text-block h2 { font-size: 1.6rem; }
+    .video-grid { grid-template-columns: 1fr; }
+
+    /* Footer */
+    .social-icons { gap: 20px; }
+    .social-icons a { font-size: 1.5rem; }
+    .signature { font-size: 1.1rem; }
+}
+
+/* --- Mobile pequeno 430px --- */
+@media (max-width: 430px) {
+    .glitch-title { font-size: 2.6rem; }
+    .albums-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .fan-banner-title { font-size: 1.3rem; }
+    .nav-container { padding: 0 14px; }
+    .logo { font-size: 1.6rem; }
+    .hero-player iframe { height: 130px; }
+    .fan-stats-row { flex-wrap: wrap; gap: 16px; }
+    .fan-stat-divider { display: none; }
+    .fan-stat-item { flex: 1 1 40%; }
 }
 
 /* --- Estilos Biografía --- */

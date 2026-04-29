@@ -10,6 +10,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- 1b. Menú Hamburguesa (Mobile) ---
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    // Crear botón X para cerrar el menú
+    const closeMenuBtn = document.createElement('button');
+    closeMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+    closeMenuBtn.setAttribute('aria-label', 'Cerrar menú');
+    closeMenuBtn.style.cssText = 'position:fixed;top:22px;right:22px;z-index:1001;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;display:none;';
+    document.body.appendChild(closeMenuBtn);
+
+    function openMenu() {
+        navLinks.classList.add('nav-open');
+        closeMenuBtn.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        navLinks.classList.remove('nav-open');
+        closeMenuBtn.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', openMenu);
+    }
+
+    closeMenuBtn.addEventListener('click', closeMenu);
+
+    // Cerrar al tocar cualquier link del menú
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
     // --- 2. Smooth Reveal Animations (Intersection Observer) ---
     // Aparecer suavemente los elementos al hacer scroll
     const observerOptions = {
