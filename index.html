@@ -44,9 +44,16 @@
         <div class="video-background">
             <video autoplay muted loop playsinline id="hero-video">
                 <source src="img/north-carolina.mp4" type="video/mp4">
-                <!-- Fallback: YouTube embed si el video local no carga -->
-                <iframe src="https://www.youtube.com/embed/qaA7HuhH6Ko?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=qaA7HuhH6Ko&amp;showinfo=0&amp;rel=0&amp;modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </video>
+            <!-- Fallback YouTube: se muestra solo si el video local falla (via JS) -->
+            <iframe id="hero-video-fallback"
+                src=""
+                data-src="https://www.youtube.com/embed/qaA7HuhH6Ko?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=qaA7HuhH6Ko&amp;showinfo=0&amp;rel=0&amp;modestbranding=1"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                style="display:none;">
+            </iframe>
         </div>
         <!-- Parallax Background Overlay -->
         <div class="hero-overlay"></div>

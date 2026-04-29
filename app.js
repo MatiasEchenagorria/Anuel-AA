@@ -10,6 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- 1c. Fallback video: si el MP4 local falla, usar YouTube ---
+    const heroVideo = document.getElementById('hero-video');
+    const heroFallback = document.getElementById('hero-video-fallback');
+    if (heroVideo && heroFallback) {
+        heroVideo.addEventListener('error', () => {
+            heroVideo.style.display = 'none';
+            heroFallback.src = heroFallback.getAttribute('data-src');
+            heroFallback.style.display = 'block';
+        });
+    }
+
     // --- 1b. Menú Hamburguesa (Mobile) ---
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
