@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "Yeezy (feat. Ñengo Flow)", duration: "3:00", link: "#" },
                 { title: "Te Necesito", duration: "3:00", link: "#" }
             ],
-            albumLink: "https://www.youtube.com/results?search_query=Anuel+AA+Real+Hasta+La+Muerte+Album"
+            albumLink: "https://open.spotify.com/intl-es/album/5pQwQRnQOuKrbVUVnGMEN4?si=M1z2l53UT52K5xltMR5ltw"
         },
         emmanuel: {
             title: "Emmanuel",
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "Secreto", duration: "3:00", link: "#" },
                 { title: "China", duration: "3:00", link: "#" }
             ],
-            albumLink: "https://www.youtube.com/results?search_query=Anuel+AA+Emmanuel+Album"
+            albumLink: "https://open.spotify.com/intl-es/album/7JtT7OyWM8BnIS5FXXPMKg?si=cvC9ZfUbRPyvlc02c1dW3Q"
         },
         losdioses: {
             title: "Los Dioses",
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "Nunca", duration: "4:32", link: "#" },
                 { title: "Municiones", duration: "2:56", link: "#" }
             ],
-            albumLink: "https://www.youtube.com/results?search_query=Anuel+AA+Ozuna+Los+Dioses+Album"
+            albumLink: "https://open.spotify.com/intl-es/album/28adqly9V7wm5DFr7hlqtK?si=UuXlDKuWSny7ygx7mZO5XA"
         },
         llnm: {
             title: "Las Leyendas Nunca Mueren",
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "Súbelo", duration: "3:00", link: "#" },
                 { title: "Última Canción", duration: "3:00", link: "#" }
             ],
-            albumLink: "https://www.youtube.com/results?search_query=Anuel+AA+Las+Leyendas+Nunca+Mueren+Album"
+            albumLink: "https://open.spotify.com/intl-es/album/4MTtBjQEt7i752hISXjKqA?si=9RYpiZ7LQk-VsdeWkLFR8A"
         },
         llnm2: {
             title: "LLNM2",
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "Coroné", duration: "3:00", link: "#" },
                 { title: "Tiene Novio", duration: "3:00", link: "#" }
             ],
-            albumLink: "https://www.youtube.com/results?search_query=Anuel+AA+LLNM2+Album"
+            albumLink: "https://open.spotify.com/intl-es/album/6DJslQtfD7mGFGZpfiyrVf?si=wH-AirIPQTK12EWV3YG7bg"
         }
     };
 
